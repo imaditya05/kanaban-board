@@ -1,21 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kanban Board</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Kanban Board</h1>
-    </header>
-    <main>
-        <!-- Main content will go here -->
-    </main>
-    <footer>
-        <p>&copy; 2023 Kanban Board</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="input-container">
+        <input type="text" placeholder="Add Todo" id="todo-input" />
+        <button id="create-toto-btn">Create</button>
+      </div>
+      <div id="board-container" class="board-container">
+        <!-- TODO Board -->
+        <div id="todo-board" class="board todo-board">
+          <h3>TODO</h3>
+          <div draggable="true" class="item"><p>Make the items movable</p></div>
+        </div>
+
+        <!-- Progress Board -->
+        <div id="progress-board" class="board progress-board">
+          <h3>In Progress</h3>
+          <div draggable="true" class="item">
+            <p>Add logic to add new items</p>
+          </div>
+        </div>
+
+        <!-- Completed Board -->
+        <div id="completed-board" class="board completed-board">
+          <h3>Completed</h3>
+          <div draggable="true" class="item"><p>Make items draggable</p></div>
+        </div>
+      </div>
+    </div>
+    <script src="insert.js"></script>
+    <script src="board.js"></script>
+  </body>
 </html>
